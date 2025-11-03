@@ -1165,7 +1165,9 @@ sources = {
 		#"TestTopologySampler",
 		#"LoophashFilter"
 	],
-
+	"pilot/JonathanWu" : [
+		"bootcamp"
+	],
 
 	# INTEGRATION TEST APPLICATIONS ##########################################
 	"tests" : [
