@@ -1,0 +1,4 @@
+/opt/anaconda3/bin/python3 ./test/run.py -j4 -1 QueueTests
+(because conda environment points to this python3 while)
+python3 ./test/run.py -j4 -1 QueueTests
+(points to global python3)
