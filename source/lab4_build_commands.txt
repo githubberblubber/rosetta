@@ -1,0 +1,4 @@
+SCons by Steven Knight et al.:
+	SCons: v4.2.0.fcdadeef19fe5fead09fa7544a27502be65312be, Sat, 31 Jul 2021 18:12:46 -0700, by bdbaddog on ProDog2020
+	SCons path: ['/Users/jwu1421/College Stuff/rosetta/source/external/scons-local/scons-local-4.2.0/SCons']
+Copyright (c) 2001 - 2021 The SCons Foundation

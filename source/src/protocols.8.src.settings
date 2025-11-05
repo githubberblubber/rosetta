@@ -19,6 +19,7 @@ sources = {
 	],
 	"protocols/bootcamp": [
 		"Queue",
+		"FoldTree"
 	],
 }
 include_path = [

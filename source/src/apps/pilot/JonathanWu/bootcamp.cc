@@ -18,6 +18,8 @@
 #include <core/scoring/ScoreFunctionFactory.hh>
 #include <core/scoring/ScoreFunction.hh>
 #include <core/pose/Pose.fwd.hh>
+#include <core/scoring/Energies.hh>
+
 
 #include <core/kinematics/MoveMap.hh>           
 #include <core/optimization/MinimizerOptions.hh>
@@ -25,7 +27,6 @@
 #include <core/pack/task/PackerTask.hh> 
 #include <core/pack/task/TaskFactory.hh> 
 #include <core/pack/pack_rotamers.hh>
-
 #include <numeric/random/random.hh>
 #include <protocols/moves/MonteCarlo.hh>
 #include <protocols/moves/PyMOLMover.hh>
@@ -72,9 +73,17 @@ int main( int argc, char ** argv ) {
     // protocols::moves::PyMOLObserverOP the_observer = protocols::moves::AddPyMOLObserver( *mypose, true, 0 );
     protocols::moves::MonteCarlo mc(*mypose, *sfxn, 100);
     mc.boltzmann(*mypose);
+    float accepted = 0;
+    core::Real energy = 0;
     for (int i = 0; i < 1000; i++) {
         if (i % 100 == 99) {
             mypose->dump_pdb("out" + std::to_string(i) + ".pdb");
+            if (mc.mc_accepted() > 0) {
+                accepted += 1;
+            }
+            energy = energy + mypose->energies().total_energy();
+            std::cout << "Average Acceptance Rate: " << accepted / i << std::endl;
+            std::cout << "Average Energy: " << energy / i << std::endl;
         }
         // the_observer->pymol().apply( *mypose);       
         core::Size randres = static_cast< core::Size > ( numeric::random::uniform() * mypose->size() + 1 ); 
@@ -94,7 +103,6 @@ int main( int argc, char ** argv ) {
         
         // c. Run the packer
         core::pack::pack_rotamers( *mypose, *sfxn, repack_task );
-
         
         // 3. MINIMIZATION (Optimize backbone and side-chains)
         // a. Copy current pose (optimization to avoid PyMOL slowdown)
@@ -114,6 +122,7 @@ int main( int argc, char ** argv ) {
         core::Real current_score = mc.last_accepted_score();
         std::cout << current_score << "\n";
 
+        mc.mc_accepted();
     }
     return 0;
 } 
