@@ -19,6 +19,7 @@
 #include <core/scoring/dssp/Dssp.hh>
 #include <core/kinematics/FoldTree.hh>
 #include <protocols/moves/DsspMover.hh>
+#include <test/util/pose_funcs.hh>
 
 // --------------- Test Class --------------- //
 
@@ -220,6 +221,12 @@ public:
             std::cout << i->start() << " " << i->stop() << " " << i->label() << std::endl;
         }
     }
+
+    // void test_in() {
+    //     core::pose::Pose testPose = create_test_in_pdb_pose();
+    //     // core::kinematics::FoldTree actual_ft = fold_tree_from_ss(&testPose);
+    //     // TS_ASSERT(actual_ft.check_fold_tree());
+    // }
 
 	utility::vector1< std::pair< core::Size, core::Size > >
 	identify_secondary_structure_spans( std::string const & ss_string )
