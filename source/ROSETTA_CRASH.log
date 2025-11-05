@@ -1,0 +1,48 @@
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: /Users/jwu1421/College Stuff/rosetta/source/bin/rosetta_scripts.default.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:file:s=1UBQ.pdb -parser:protocol=my_awesome_rscript.xml
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x000000010cf2e9ce backtrace_string(int) + 78
+1   libutility.dylib                    0x000000010cf4f86e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x000000010cf3269c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 108
+3   libutility.dylib                    0x000000010cf325d7 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) + 55
+4   libprotocols.1.dylib                0x0000000109697d5f protocols::rosetta_scripts::RosettaScriptsParser::read_in_and_recursively_replace_includes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, unsigned long, bool, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const + 4239
+5   libprotocols.1.dylib                0x000000010969602b protocols::rosetta_scripts::RosettaScriptsParser::create_tag_from_xml(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) + 139
+6   libprotocols.1.dylib                0x0000000109695bf9 protocols::rosetta_scripts::RosettaScriptsParser::create_tag_from_xml(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, utility::options::OptionCollection const&) + 345
+7   libprotocols.1.dylib                0x000000010969c743 protocols::rosetta_scripts::RosettaScriptsParser::generate_mover(std::__1::shared_ptr<protocols::moves::Mover>&, bool, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) + 467
+8   libprotocols.1.dylib                0x00000001093b8353 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, unsigned long&, unsigned long&, bool) + 6803
+9   libprotocols.1.dylib                0x00000001093b5ae2 protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 194
+10  libprotocols.1.dylib                0x00000001093b0c02 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 66
+11  rosetta_scripts.default.macosclangr 0x00000001031e0c13 main + 1555
+12  dyld                                0x000000010c84252e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/protocols/rosetta_scripts/RosettaScriptsParser.cc
+[LINE]: 618
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Unable to open RosettaScripts XML file: "my_awesome_rscript.xml".
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
