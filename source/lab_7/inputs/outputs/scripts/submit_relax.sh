@@ -1,0 +1,9 @@
+cd /Users/jwu1421/College\ Stuff/rosetta/source/lab_7/inputs/outputs/1_1 && /Users/jwu1421/College\ Stuff/rosetta/source/bin/relax.default.macosclangrelease @/Users/jwu1421/relax_input.flags
+cd /Users/jwu1421/College\ Stuff/rosetta/source/lab_7/inputs/outputs/1_2 && /Users/jwu1421/College\ Stuff/rosetta/source/bin/relax.default.macosclangrelease @/Users/jwu1421/relax_input.flags
+cd /Users/jwu1421/College\ Stuff/rosetta/source/lab_7/inputs/outputs/1_3 && /Users/jwu1421/College\ Stuff/rosetta/source/bin/relax.default.macosclangrelease @/Users/jwu1421/relax_input.flags
+cd /Users/jwu1421/College\ Stuff/rosetta/source/lab_7/inputs/outputs/2_1 && /Users/jwu1421/College\ Stuff/rosetta/source/bin/relax.default.macosclangrelease @/Users/jwu1421/relax_input.flags
+cd /Users/jwu1421/College\ Stuff/rosetta/source/lab_7/inputs/outputs/2_2 && /Users/jwu1421/College\ Stuff/rosetta/source/bin/relax.default.macosclangrelease @/Users/jwu1421/relax_input.flags
+cd /Users/jwu1421/College\ Stuff/rosetta/source/lab_7/inputs/outputs/2_3 && /Users/jwu1421/College\ Stuff/rosetta/source/bin/relax.default.macosclangrelease @/Users/jwu1421/relax_input.flags
+cd /Users/jwu1421/College\ Stuff/rosetta/source/lab_7/inputs/outputs/3_1 && /Users/jwu1421/College\ Stuff/rosetta/source/bin/relax.default.macosclangrelease @/Users/jwu1421/relax_input.flags
+cd /Users/jwu1421/College\ Stuff/rosetta/source/lab_7/inputs/outputs/3_2 && /Users/jwu1421/College\ Stuff/rosetta/source/bin/relax.default.macosclangrelease @/Users/jwu1421/relax_input.flags
+cd /Users/jwu1421/College\ Stuff/rosetta/source/lab_7/inputs/outputs/3_3 && /Users/jwu1421/College\ Stuff/rosetta/source/bin/relax.default.macosclangrelease @/Users/jwu1421/relax_input.flags

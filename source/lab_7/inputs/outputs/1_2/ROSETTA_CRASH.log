@@ -1,0 +1,636 @@
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: UNKNOWN APPLICATION
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+NO OPTIONS SPECIFIED
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x0000000115f5f9ce backtrace_string(int) + 78
+1   libutility.dylib                    0x0000000115f8086e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x00000001160404d2 utility::options::OptionCollection::load_options_from_file_exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 514
+3   libutility.dylib                    0x000000011603a0a4 utility::options::OptionCollection::load(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::list<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&, bool) + 532
+4   libutility.dylib                    0x000000011603b0ec utility::options::OptionCollection::load(int, char* const*, bool) + 556
+5   libcore.6.dylib                     0x0000000111444204 core::init::init(int, char**) + 52
+6   relax.default.macosclangrelease     0x000000010c4afbb9 main + 89
+7   dyld                                0x000000011802652e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/utility/options/OptionCollection.cc
+[LINE]: 572
+[START_MESSAGE]
+Option file open failed for: '/Users/jwu1421/College Stuff/rosetta/source/lab_7/inputs/relax_inputs.flag'
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: UNKNOWN APPLICATION
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+NO OPTIONS SPECIFIED
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x000000011549e9ce backtrace_string(int) + 78
+1   libutility.dylib                    0x00000001154bf86e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x000000011557f4d2 utility::options::OptionCollection::load_options_from_file_exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 514
+3   libutility.dylib                    0x00000001155790a4 utility::options::OptionCollection::load(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::list<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&, bool) + 532
+4   libutility.dylib                    0x000000011557a0ec utility::options::OptionCollection::load(int, char* const*, bool) + 556
+5   libcore.6.dylib                     0x0000000110983204 core::init::init(int, char**) + 52
+6   relax.default.macosclangrelease     0x000000010b9eebb9 main + 89
+7   dyld                                0x0000000118a8552e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/utility/options/OptionCollection.cc
+[LINE]: 572
+[START_MESSAGE]
+Option file open failed for: '/Users/jwu1421/relax_inputs.flag'
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: UNKNOWN APPLICATION
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+NO OPTIONS SPECIFIED
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x00000001128739ce backtrace_string(int) + 78
+1   libutility.dylib                    0x000000011289486e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x00000001129544d2 utility::options::OptionCollection::load_options_from_file_exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 514
+3   libutility.dylib                    0x000000011294e0a4 utility::options::OptionCollection::load(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::list<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&, bool) + 532
+4   libutility.dylib                    0x000000011294f0ec utility::options::OptionCollection::load(int, char* const*, bool) + 556
+5   libcore.6.dylib                     0x000000010dd58204 core::init::init(int, char**) + 52
+6   relax.default.macosclangrelease     0x0000000108dc3bb9 main + 89
+7   dyld                                0x000000011694f52e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/utility/options/OptionCollection.cc
+[LINE]: 572
+[START_MESSAGE]
+Option file open failed for: '/Users/jwu1421/relax_inputs.flags'
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: UNKNOWN APPLICATION
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+NO OPTIONS SPECIFIED
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x00000001199a39ce backtrace_string(int) + 78
+1   libutility.dylib                    0x00000001199c486e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x0000000119a844d2 utility::options::OptionCollection::load_options_from_file_exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 514
+3   libutility.dylib                    0x0000000119a7e0a4 utility::options::OptionCollection::load(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::list<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&, bool) + 532
+4   libutility.dylib                    0x0000000119a7f0ec utility::options::OptionCollection::load(int, char* const*, bool) + 556
+5   libcore.6.dylib                     0x0000000114e88204 core::init::init(int, char**) + 52
+6   relax.default.macosclangrelease     0x000000010fb91bb9 main + 89
+7   dyld                                0x0000000112ccb52e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/utility/options/OptionCollection.cc
+[LINE]: 572
+[START_MESSAGE]
+Option file open failed for: '/Users/jwu1421/relax_inputs.flags'
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: UNKNOWN APPLICATION
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+NO OPTIONS SPECIFIED
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x000000010d3cc9ce backtrace_string(int) + 78
+1   libutility.dylib                    0x000000010d3ed86e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x000000010d4ad4d2 utility::options::OptionCollection::load_options_from_file_exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 514
+3   libutility.dylib                    0x000000010d4a70a4 utility::options::OptionCollection::load(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::list<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&, bool) + 532
+4   libutility.dylib                    0x000000010d4a80ec utility::options::OptionCollection::load(int, char* const*, bool) + 556
+5   libcore.6.dylib                     0x00000001088b1204 core::init::init(int, char**) + 52
+6   relax.default.macosclangrelease     0x000000010391cbb9 main + 89
+7   dyld                                0x000000011146652e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/utility/options/OptionCollection.cc
+[LINE]: 572
+[START_MESSAGE]
+Option file open failed for: '/Users/jwu1421/College Stuff/rosetta/source/lab_7/inputs/relax_input.flag'
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: /Users/jwu1421/College Stuff/rosetta/source/bin/relax.default.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:path:database=../../../database/ -in:file:s=./outputs/scripts/5J0K_A.pdb -in:file:native=../inputs/5J0K_A.pdb -out:nstruct=3 -out:prefix=r_ -out:file:scorefile=score.sc -out:file:silent=relaxed_structures.silent -relax:default_repeats=1 -relax:constrain_relax_to_start_coords
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x00000001138b19ce backtrace_string(int) + 78
+1   libutility.dylib                    0x00000001138d286e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x00000001138b569c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 108
+3   libutility.dylib                    0x00000001138b55d7 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) + 55
+4   libcore.3.dylib                     0x000000011676bb98 core::scoring::find_weights_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 1768
+5   libcore.3.dylib                     0x000000011676a038 core::scoring::ScoreFunction::add_weights_from_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 40
+6   libcore.3.dylib                     0x0000000116787d68 core::scoring::ScoreFunctionFactory::load_score_function_from_disk(utility::options::OptionCollection const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) + 1512
+7   libcore.3.dylib                     0x000000011678d75b std::__1::__function::__func<std::__1::__bind<std::__1::shared_ptr<core::scoring::SplitUnfoldedTwoBodyPotential> (*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const> >, std::__1::allocator<std::__1::__bind<std::__1::shared_ptr<core::scoring::SplitUnfoldedTwoBodyPotential> (*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const> > >, std::__1::shared_ptr<core::scoring::SplitUnfoldedTwoBodyPotential> ()>::operator()() + 27
+8   libcore.3.dylib                     0x0000000116788546 std::__1::shared_ptr<core::scoring::ScoreFunction> utility::thread::safely_check_map_for_key_and_insert_if_absent<core::scoring::ScoreFunction, core::scoring::ScoreFunctionKey>(std::__1::function<std::__1::shared_ptr<core::scoring::ScoreFunction> ()>, bool, core::scoring::ScoreFunctionKey const&, std::__1::map<core::scoring::ScoreFunctionKey, std::__1::shared_ptr<core::scoring::ScoreFunction>, std::__1::less<core::scoring::ScoreFunctionKey>, std::__1::allocator<std::__1::pair<core::scoring::ScoreFunctionKey const, std::__1::shared_ptr<core::scoring::ScoreFunction> > > >&) + 150
+9   libcore.3.dylib                     0x0000000116785fbb core::scoring::ScoreFunctionFactory::create_score_function_nonstatic(utility::options::OptionCollection const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) + 667
+10  libcore.3.dylib                     0x000000011678a89d core::scoring::get_score_function(utility::options::OptionCollection const&, bool) + 2045
+11  libcore.3.dylib                     0x000000011678a087 core::scoring::get_score_function(bool) + 23
+12  libprotocols.4.dylib                0x000000010f855ba8 protocols::relax::generate_relax_from_cmd(utility::options::OptionCollection const&, bool) + 40
+13  libprotocols.4.dylib                0x000000010f855b67 protocols::relax::generate_relax_from_cmd(bool) + 23
+14  libprotocols.4.dylib                0x000000010f842c72 protocols::relax::Relax_main(bool) + 34
+15  relax.default.macosclangrelease     0x0000000109e01bc0 main + 96
+16  dyld                                0x000000011625252e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/core/scoring/ScoreFunction.cc
+[LINE]: 3516
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Unable to open weights/patch file. None of (./)ref2015 or (./)ref2015.wts or ../../../database/scoring/weights/ref2015 or ../../../database/scoring/weights/ref2015.wts exist
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: UNKNOWN APPLICATION
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+NO OPTIONS SPECIFIED
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x000000010ace09ce backtrace_string(int) + 78
+1   libutility.dylib                    0x000000010ad0186e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x000000010adcd1f6 utility::options::OptionCollection::set_option_value_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::list<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&) + 1206
+3   libutility.dylib                    0x000000010adc0d67 utility::options::OptionCollection::load_option_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::list<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, bool) + 823
+4   libutility.dylib                    0x000000010adbfb8c utility::options::OptionCollection::load_options_from_stream(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) + 2908
+5   libutility.dylib                    0x000000010adc1411 utility::options::OptionCollection::load_options_from_file_exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 321
+6   libutility.dylib                    0x000000010adbb0a4 utility::options::OptionCollection::load(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::list<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&, bool) + 532
+7   libutility.dylib                    0x000000010adbc0ec utility::options::OptionCollection::load(int, char* const*, bool) + 556
+8   libcore.6.dylib                     0x00000001061c5204 core::init::init(int, char**) + 52
+9   relax.default.macosclangrelease     0x0000000100ee3bb9 main + 89
+10  dyld                                0x00000001052b152e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/utility/options/OptionCollection.cc
+[LINE]: 1245
+[START_MESSAGE]
+ Multiple values specified for option -in:file:native
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: /Users/jwu1421/College Stuff/rosetta/source/bin/relax.default.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:path:database=/Users/jwu1421/College/ Stuff/rosetta/database/ -in:file:s=./outputs/scripts/5J0K_A.pdb -in:file:native=/Users/jwu1421/College/ Stuff/rosetta/source/lab_7/inputs/5J0K_A.pdb -out:nstruct=3 -out:prefix=r_ -out:file:scorefile=score.sc -out:file:silent=relaxed_structures.silent -relax:default_repeats=1 -relax:constrain_relax_to_start_coords
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x00000001164cc9ce backtrace_string(int) + 78
+1   libutility.dylib                    0x00000001164ed86e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x00000001164d069c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 108
+3   libutility.dylib                    0x00000001164d05d7 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) + 55
+4   libcore.3.dylib                     0x0000000117b35b98 core::scoring::find_weights_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 1768
+5   libcore.3.dylib                     0x0000000117b34038 core::scoring::ScoreFunction::add_weights_from_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 40
+6   libcore.3.dylib                     0x0000000117b51d68 core::scoring::ScoreFunctionFactory::load_score_function_from_disk(utility::options::OptionCollection const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) + 1512
+7   libcore.3.dylib                     0x0000000117b5775b std::__1::__function::__func<std::__1::__bind<std::__1::shared_ptr<core::scoring::SplitUnfoldedTwoBodyPotential> (*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const> >, std::__1::allocator<std::__1::__bind<std::__1::shared_ptr<core::scoring::SplitUnfoldedTwoBodyPotential> (*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const> > >, std::__1::shared_ptr<core::scoring::SplitUnfoldedTwoBodyPotential> ()>::operator()() + 27
+8   libcore.3.dylib                     0x0000000117b52546 std::__1::shared_ptr<core::scoring::ScoreFunction> utility::thread::safely_check_map_for_key_and_insert_if_absent<core::scoring::ScoreFunction, core::scoring::ScoreFunctionKey>(std::__1::function<std::__1::shared_ptr<core::scoring::ScoreFunction> ()>, bool, core::scoring::ScoreFunctionKey const&, std::__1::map<core::scoring::ScoreFunctionKey, std::__1::shared_ptr<core::scoring::ScoreFunction>, std::__1::less<core::scoring::ScoreFunctionKey>, std::__1::allocator<std::__1::pair<core::scoring::ScoreFunctionKey const, std::__1::shared_ptr<core::scoring::ScoreFunction> > > >&) + 150
+9   libcore.3.dylib                     0x0000000117b4ffbb core::scoring::ScoreFunctionFactory::create_score_function_nonstatic(utility::options::OptionCollection const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) + 667
+10  libcore.3.dylib                     0x0000000117b5489d core::scoring::get_score_function(utility::options::OptionCollection const&, bool) + 2045
+11  libcore.3.dylib                     0x0000000117b54087 core::scoring::get_score_function(bool) + 23
+12  libprotocols.4.dylib                0x0000000112470ba8 protocols::relax::generate_relax_from_cmd(utility::options::OptionCollection const&, bool) + 40
+13  libprotocols.4.dylib                0x0000000112470b67 protocols::relax::generate_relax_from_cmd(bool) + 23
+14  libprotocols.4.dylib                0x000000011245dc72 protocols::relax::Relax_main(bool) + 34
+15  relax.default.macosclangrelease     0x000000010c4d0bc0 main + 96
+16  dyld                                0x000000010ecdc52e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/core/scoring/ScoreFunction.cc
+[LINE]: 3516
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Unable to open weights/patch file. None of (./)ref2015 or (./)ref2015.wts or /Users/jwu1421/College/scoring/weights/ref2015 or /Users/jwu1421/College/scoring/weights/ref2015.wts exist
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: /Users/jwu1421/College Stuff/rosetta/source/bin/relax.default.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:path:database="/Users/jwu1421/College/ Stuff/rosetta/database/" -in:file:s=./outputs/scripts/5J0K_A.pdb -in:file:native=/Users/jwu1421/College/ Stuff/rosetta/source/lab_7/inputs/5J0K_A.pdb -out:nstruct=3 -out:prefix=r_ -out:file:scorefile=score.sc -out:file:silent=relaxed_structures.silent -relax:default_repeats=1 -relax:constrain_relax_to_start_coords
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x00000001193549ce backtrace_string(int) + 78
+1   libutility.dylib                    0x000000011937586e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x000000011935869c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 108
+3   libutility.dylib                    0x00000001193585d7 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) + 55
+4   libcore.3.dylib                     0x000000011a9c1b98 core::scoring::find_weights_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 1768
+5   libcore.3.dylib                     0x000000011a9c0038 core::scoring::ScoreFunction::add_weights_from_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 40
+6   libcore.3.dylib                     0x000000011a9ddd68 core::scoring::ScoreFunctionFactory::load_score_function_from_disk(utility::options::OptionCollection const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) + 1512
+7   libcore.3.dylib                     0x000000011a9e375b std::__1::__function::__func<std::__1::__bind<std::__1::shared_ptr<core::scoring::SplitUnfoldedTwoBodyPotential> (*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const> >, std::__1::allocator<std::__1::__bind<std::__1::shared_ptr<core::scoring::SplitUnfoldedTwoBodyPotential> (*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const>, std::__1::reference_wrapper<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const> > >, std::__1::shared_ptr<core::scoring::SplitUnfoldedTwoBodyPotential> ()>::operator()() + 27
+8   libcore.3.dylib                     0x000000011a9de546 std::__1::shared_ptr<core::scoring::ScoreFunction> utility::thread::safely_check_map_for_key_and_insert_if_absent<core::scoring::ScoreFunction, core::scoring::ScoreFunctionKey>(std::__1::function<std::__1::shared_ptr<core::scoring::ScoreFunction> ()>, bool, core::scoring::ScoreFunctionKey const&, std::__1::map<core::scoring::ScoreFunctionKey, std::__1::shared_ptr<core::scoring::ScoreFunction>, std::__1::less<core::scoring::ScoreFunctionKey>, std::__1::allocator<std::__1::pair<core::scoring::ScoreFunctionKey const, std::__1::shared_ptr<core::scoring::ScoreFunction> > > >&) + 150
+9   libcore.3.dylib                     0x000000011a9dbfbb core::scoring::ScoreFunctionFactory::create_score_function_nonstatic(utility::options::OptionCollection const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) + 667
+10  libcore.3.dylib                     0x000000011a9e089d core::scoring::get_score_function(utility::options::OptionCollection const&, bool) + 2045
+11  libcore.3.dylib                     0x000000011a9e0087 core::scoring::get_score_function(bool) + 23
+12  libprotocols.4.dylib                0x000000011577aba8 protocols::relax::generate_relax_from_cmd(utility::options::OptionCollection const&, bool) + 40
+13  libprotocols.4.dylib                0x000000011577ab67 protocols::relax::generate_relax_from_cmd(bool) + 23
+14  libprotocols.4.dylib                0x0000000115767c72 protocols::relax::Relax_main(bool) + 34
+15  relax.default.macosclangrelease     0x000000010fd26bc0 main + 96
+16  dyld                                0x000000011729052e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/core/scoring/ScoreFunction.cc
+[LINE]: 3516
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Unable to open weights/patch file. None of (./)ref2015 or (./)ref2015.wts or /Users/jwu1421/College/ Stuff/rosetta/database/scoring/weights/ref2015 or /Users/jwu1421/College/ Stuff/rosetta/database/scoring/weights/ref2015.wts exist
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: /Users/jwu1421/College Stuff/rosetta/source/bin/relax.default.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:path:database="/Users/jwu1421/College Stuff/rosetta/database/" -in:file:s=./outputs/scripts/5J0K_A.pdb -in:file:native=/Users/jwu1421/College Stuff/rosetta/source/lab_7/inputs/5J0K_A.pdb -out:nstruct=3 -out:prefix=r_ -out:file:scorefile=score.sc -out:file:silent=relaxed_structures.silent -relax:default_repeats=1 -relax:constrain_relax_to_start_coords
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x00000001109149ce backtrace_string(int) + 78
+1   libutility.dylib                    0x000000011093586e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x000000011091869c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 108
+3   libutility.dylib                    0x00000001109185d7 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) + 55
+4   libcore.6.dylib                     0x000000010bd3e374 core::import_pose::pose_from_file(core::pose::Pose&, core::chemical::ResidueTypeSet const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType) + 3924
+5   libcore.6.dylib                     0x000000010bd3cb2a core::import_pose::pose_from_file(core::pose::Pose&, core::chemical::ResidueTypeSet const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, core::import_pose::FileType) + 74
+6   libprotocols.1.dylib                0x000000010d0798e5 protocols::jd2::set_native_in_mover(protocols::moves::Mover&, utility::options::OptionCollection const&) + 789
+7   libprotocols.4.dylib                0x000000010c8a5c8d protocols::relax::Relax_main(bool) + 61
+8   relax.default.macosclangrelease     0x0000000106b8ebc0 main + 96
+9   dyld                                0x00000001074be52e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 387
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/Users/jwu1421/College Stuff/rosetta/source/lab_7/inputs/5J0K_A.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: /Users/jwu1421/College Stuff/rosetta/source/bin/relax.default.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:path:database="/Users/jwu1421/College Stuff/rosetta/database/" -in:file:s=./outputs/scripts/5J0K_A.pdb -in:file:native=/Users/jwu1421/College Stuff/rosetta/source/lab_7/inputs/5J0K_A.pdb -out:nstruct=3 -out:prefix=r_ -out:file:scorefile=score.sc -out:file:silent=relaxed_structures.silent -relax:default_repeats=1 -relax:constrain_relax_to_start_coords
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x0000000115a069ce backtrace_string(int) + 78
+1   libutility.dylib                    0x0000000115a2786e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x0000000115a0a69c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 108
+3   libutility.dylib                    0x0000000115a0a5d7 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) + 55
+4   libcore.6.dylib                     0x0000000114d82374 core::import_pose::pose_from_file(core::pose::Pose&, core::chemical::ResidueTypeSet const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType) + 3924
+5   libcore.6.dylib                     0x0000000114d80b2a core::import_pose::pose_from_file(core::pose::Pose&, core::chemical::ResidueTypeSet const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, core::import_pose::FileType) + 74
+6   libprotocols.1.dylib                0x00000001169228e5 protocols::jd2::set_native_in_mover(protocols::moves::Mover&, utility::options::OptionCollection const&) + 789
+7   libprotocols.4.dylib                0x000000011614ec8d protocols::relax::Relax_main(bool) + 61
+8   relax.default.macosclangrelease     0x000000010fea8bc0 main + 96
+9   dyld                                0x00000001154c652e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 387
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/Users/jwu1421/College Stuff/rosetta/source/lab_7/inputs/5J0K_A.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: /Users/jwu1421/College Stuff/rosetta/source/bin/relax.default.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:path:database="/Users/jwu1421/College Stuff/rosetta/database/" -in:file:s=./outputs/scripts/5J0K_A.pdb -in:file:native=/Users/jwu1421/5J0K_A.pdb -out:nstruct=3 -out:prefix=r_ -out:file:scorefile=score.sc -out:file:silent=relaxed_structures.silent -relax:default_repeats=1 -relax:constrain_relax_to_start_coords
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x00000001182899ce backtrace_string(int) + 78
+1   libutility.dylib                    0x00000001182aa86e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x000000011828d69c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 108
+3   libutility.dylib                    0x000000011828d5d7 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) + 55
+4   libcore.6.dylib                     0x00000001136b3374 core::import_pose::pose_from_file(core::pose::Pose&, core::chemical::ResidueTypeSet const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType) + 3924
+5   libcore.6.dylib                     0x00000001136b18a1 core::import_pose::pose_from_file(core::pose::Pose&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType) + 97
+6   libcore.6.dylib                     0x00000001136b00a3 core::import_pose::pose_from_file(core::pose::Pose&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, core::import_pose::FileType) + 67
+7   libprotocols.1.dylib                0x00000001149ce472 protocols::jd2::PDBJobInputter::pose_from_job(core::pose::Pose&, std::__1::shared_ptr<protocols::jd2::Job>) + 1778
+8   libprotocols.1.dylib                0x00000001149af073 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, unsigned long&, unsigned long&, bool) + 1971
+9   libprotocols.1.dylib                0x00000001149adae2 protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 194
+10  libprotocols.1.dylib                0x00000001149a8c02 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 66
+11  libprotocols.4.dylib                0x000000011421bd45 protocols::relax::Relax_main(bool) + 4341
+12  relax.default.macosclangrelease     0x000000010e7d9bc0 main + 96
+13  dyld                                0x000000011bfd952e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 387
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "./outputs/scripts/5J0K_A.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: /Users/jwu1421/College Stuff/rosetta/source/bin/relax.default.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:path:database="/Users/jwu1421/College Stuff/rosetta/database/" -in:file:s=./outputs/scripts/5J0K_A.pdb -in:file:native=/Users/jwu1421/5J0K_A.pdb -out:nstruct=3 -out:prefix=r_ -out:file:scorefile=score.sc -out:file:silent=relaxed_structures.silent -relax:default_repeats=1 -relax:constrain_relax_to_start_coords
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x00000001159d69ce backtrace_string(int) + 78
+1   libutility.dylib                    0x00000001159f786e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x00000001159da69c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 108
+3   libutility.dylib                    0x00000001159da5d7 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) + 55
+4   libcore.6.dylib                     0x0000000110e00374 core::import_pose::pose_from_file(core::pose::Pose&, core::chemical::ResidueTypeSet const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType) + 3924
+5   libcore.6.dylib                     0x0000000110dfe8a1 core::import_pose::pose_from_file(core::pose::Pose&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType) + 97
+6   libcore.6.dylib                     0x0000000110dfd0a3 core::import_pose::pose_from_file(core::pose::Pose&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, core::import_pose::FileType) + 67
+7   libprotocols.1.dylib                0x000000011211b472 protocols::jd2::PDBJobInputter::pose_from_job(core::pose::Pose&, std::__1::shared_ptr<protocols::jd2::Job>) + 1778
+8   libprotocols.1.dylib                0x00000001120fc073 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, unsigned long&, unsigned long&, bool) + 1971
+9   libprotocols.1.dylib                0x00000001120faae2 protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 194
+10  libprotocols.1.dylib                0x00000001120f5c02 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 66
+11  libprotocols.4.dylib                0x0000000111968d45 protocols::relax::Relax_main(bool) + 4341
+12  relax.default.macosclangrelease     0x000000010bf26bc0 main + 96
+13  dyld                                0x000000011718052e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 387
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "./outputs/scripts/5J0K_A.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 0.0.dev0
+[COMMIT_DATE]: 2025-11-04T10:02:46
+[APPLICATION]: /Users/jwu1421/College Stuff/rosetta/source/bin/relax.default.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:path:database="/Users/jwu1421/College Stuff/rosetta/database/" -in:file:s=./outputs/scripts/5J0K_A.pdb -in:file:native=/Users/jwu1421/5J0K_A.pdb -in:file:fullatom -out:nstruct=3 -out:prefix=r_ -out:file:scorefile=score.sc -out:file:silent=relaxed_structures.silent -relax:default_repeats=1 -relax:constrain_relax_to_start_coords
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   libutility.dylib                    0x00000001144089ce backtrace_string(int) + 78
+1   libutility.dylib                    0x000000011442986e utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 190
+2   libutility.dylib                    0x000000011440c69c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 108
+3   libutility.dylib                    0x000000011440c5d7 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) + 55
+4   libcore.6.dylib                     0x000000010f85a374 core::import_pose::pose_from_file(core::pose::Pose&, core::chemical::ResidueTypeSet const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType) + 3924
+5   libcore.6.dylib                     0x000000010f8588a1 core::import_pose::pose_from_file(core::pose::Pose&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType) + 97
+6   libcore.6.dylib                     0x000000010f8570a3 core::import_pose::pose_from_file(core::pose::Pose&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, core::import_pose::FileType) + 67
+7   libprotocols.1.dylib                0x0000000110b75472 protocols::jd2::PDBJobInputter::pose_from_job(core::pose::Pose&, std::__1::shared_ptr<protocols::jd2::Job>) + 1778
+8   libprotocols.1.dylib                0x0000000110b56073 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, unsigned long&, unsigned long&, bool) + 1971
+9   libprotocols.1.dylib                0x0000000110b54ae2 protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 194
+10  libprotocols.1.dylib                0x0000000110b4fc02 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 66
+11  libprotocols.4.dylib                0x00000001103c2d45 protocols::relax::Relax_main(bool) + 4341
+12  relax.default.macosclangrelease     0x000000010a980bc0 main + 96
+13  dyld                                0x00000001112f752e start + 462
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 387
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "./outputs/scripts/5J0K_A.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+

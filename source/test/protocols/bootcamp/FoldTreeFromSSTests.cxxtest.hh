@@ -20,7 +20,7 @@
 #include <core/kinematics/FoldTree.hh>
 #include <protocols/moves/DsspMover.hh>
 #include <test/util/pose_funcs.hh>
-
+#include <protocols/bootcamp/fold_tree_from_ss.hh> 
 // --------------- Test Class --------------- //
 
 class FoldTreeFromSSTests : public CxxTest::TestSuite {
@@ -54,7 +54,7 @@ public:
         expected_spans.push_back( std::make_pair( 65, 68 ) ); // Input length is 69
 
         utility::vector1< std::pair< core::Size, core::Size > > actual_spans = 
-            identify_secondary_structure_spans( ss_string );
+            protocols::bootcamp::identify_secondary_structure_spans( ss_string );
 
         TS_ASSERT_EQUALS( actual_spans.size(), expected_spans.size() );
         
@@ -83,7 +83,7 @@ public:
         expected_spans.push_back( std::make_pair( 63, 65 ) ); // Input length is 67
 
         utility::vector1< std::pair< core::Size, core::Size > > actual_spans = 
-            identify_secondary_structure_spans( ss_string );
+            protocols::bootcamp::identify_secondary_structure_spans( ss_string );
 
         TS_ASSERT_EQUALS( actual_spans.size(), expected_spans.size() );
 
@@ -112,9 +112,8 @@ public:
         expected_spans.push_back( std::make_pair( 40, 40 ) );
         expected_spans.push_back( std::make_pair( 42, 42 ) );
         expected_spans.push_back( std::make_pair( 44, 51 ) );
-
         utility::vector1< std::pair< core::Size, core::Size > > actual_spans = 
-            identify_secondary_structure_spans( ss_string );
+            protocols::bootcamp::identify_secondary_structure_spans( ss_string );
 
         TS_ASSERT_EQUALS( actual_spans.size(), expected_spans.size() );
 
@@ -128,16 +127,16 @@ public:
 
     void test_str4() {
         std::string const ss_string = "   EEEEEEE    EEEEEEE         EEEEEEEEE    EEEEEEEEEE   HHHHHH         EEEEEEEEE         EEEEE     ";
-        core::kinematics::FoldTree actual_ft = fold_tree_from_dssp_string( ss_string );
+        core::kinematics::FoldTree actual_ft = protocols::bootcamp::fold_tree_from_dssp_string( ss_string );
         
         utility::vector1< std::pair< core::Size, core::Size > > ss_boundaries = 
-            identify_secondary_structure_spans( ss_string );
+            protocols::bootcamp::identify_secondary_structure_spans( ss_string );
 
-        std::cout << ss_boundaries.size() << std::endl;
+        // std::cout << ss_boundaries.size() << std::endl;
 
-        for (core::Size i = 1; i <= ss_boundaries.size(); ++i) {
-            std::cout << ss_boundaries[i].first << " " << ss_boundaries[i].second << std::endl;
-        }
+        // for (core::Size i = 1; i <= ss_boundaries.size(); ++i) {
+        //     std::cout << ss_boundaries[i].first << " " << ss_boundaries[i].second << std::endl;
+        // }
         // Edges are defined as tuples: <Start_Residue, Stop_Residue, Edge_Type/Jump_ID>
         // Edge_Type: PEPTIDE = core::kinematics::Edge::PEPTIDE (1).
         // Jump_ID: Sequential integer 1-indexed (1, 2, 3, ...).
@@ -214,12 +213,12 @@ public:
         
         // Check for correct number of edges and validity
         TS_ASSERT_EQUALS( actual_ft.size(), 38 ); 
-        std::cout << "Number of edges: " << actual_ft.size() << std::endl;
+        // std::cout << "Number of edges: " << actual_ft.size() << std::endl;
         TS_ASSERT( actual_ft.check_fold_tree() ); 
 
-        for (core::kinematics::FoldTree::const_iterator i = actual_ft.begin(); i != actual_ft.end(); ++i) {
-            std::cout << i->start() << " " << i->stop() << " " << i->label() << std::endl;
-        }
+        // for (core::kinematics::FoldTree::const_iterator i = actual_ft.begin(); i != actual_ft.end(); ++i) {
+        //     std::cout << i->start() << " " << i->stop() << " " << i->label() << std::endl;
+        // }
     }
 
     // void test_in() {
@@ -228,115 +227,115 @@ public:
     //     // TS_ASSERT(actual_ft.check_fold_tree());
     // }
 
-	utility::vector1< std::pair< core::Size, core::Size > >
-	identify_secondary_structure_spans( std::string const & ss_string )
-	{
-		utility::vector1< std::pair< core::Size, core::Size > > ss_boundaries;
-		core::Size strand_start = -1;
-		for ( core::Size ii = 0; ii < ss_string.size(); ++ii ) {
-			if ( ss_string[ ii ] == 'E' || ss_string[ ii ] == 'H'  ) {
-			if ( int( strand_start ) == -1 ) {
-				strand_start = ii;
-			} else if ( ss_string[ii] != ss_string[strand_start] ) {
-				ss_boundaries.push_back( std::make_pair( strand_start+1, ii ) );
-				strand_start = ii;
-			}
-			} else {
-			if ( int( strand_start ) != -1 ) {
-				ss_boundaries.push_back( std::make_pair( strand_start+1, ii ) );
-				strand_start = -1;
-			}
-			}
-		}
-		if ( int( strand_start ) != -1 ) {
-			// last residue was part of a ss-eleemnt                                                                                                                                
-			ss_boundaries.push_back( std::make_pair( strand_start+1, ss_string.size() ));
-		}
-		for ( core::Size ii = 1; ii <= ss_boundaries.size(); ++ii ) {
-			std::cout << "SS Element " << ii << " from residue "
-			<< ss_boundaries[ ii ].first << " to "
-			<< ss_boundaries[ ii ].second << std::endl;
-		}
-		return ss_boundaries;
-	}
+	// utility::vector1< std::pair< core::Size, core::Size > >
+	// protocols::bootcamp::identify_secondary_structure_spans( std::string const & ss_string )
+	// {
+	// 	utility::vector1< std::pair< core::Size, core::Size > > ss_boundaries;
+	// 	core::Size strand_start = -1;
+	// 	for ( core::Size ii = 0; ii < ss_string.size(); ++ii ) {
+	// 		if ( ss_string[ ii ] == 'E' || ss_string[ ii ] == 'H'  ) {
+	// 		if ( int( strand_start ) == -1 ) {
+	// 			strand_start = ii;
+	// 		} else if ( ss_string[ii] != ss_string[strand_start] ) {
+	// 			ss_boundaries.push_back( std::make_pair( strand_start+1, ii ) );
+	// 			strand_start = ii;
+	// 		}
+	// 		} else {
+	// 		if ( int( strand_start ) != -1 ) {
+	// 			ss_boundaries.push_back( std::make_pair( strand_start+1, ii ) );
+	// 			strand_start = -1;
+	// 		}
+	// 		}
+	// 	}
+	// 	if ( int( strand_start ) != -1 ) {
+	// 		// last residue was part of a ss-eleemnt                                                                                                                                
+	// 		ss_boundaries.push_back( std::make_pair( strand_start+1, ss_string.size() ));
+	// 	}
+	// 	for ( core::Size ii = 1; ii <= ss_boundaries.size(); ++ii ) {
+	// 		std::cout << "SS Element " << ii << " from residue "
+	// 		<< ss_boundaries[ ii ].first << " to "
+	// 		<< ss_boundaries[ ii ].second << std::endl;
+	// 	}
+	// 	return ss_boundaries;
+	// }
 
-    core::kinematics::FoldTree
-	fold_tree_from_ss(core::pose::Pose  *mypose) {
-		// protocols::moves::DsspMover dssp;
-		// dssp.apply( mypose );
-		// mypose.secstruct(1);
+    // core::kinematics::FoldTree
+	// fold_tree_from_ss(core::pose::Pose  *mypose) {
+	// 	// protocols::moves::DsspMover dssp;
+	// 	// dssp.apply( mypose );
+	// 	// mypose.secstruct(1);
 
-		core::scoring::dssp::Dssp dssp( *mypose );	
-		std::string ss_string = dssp.get_dssp_secstruct();
-		return fold_tree_from_dssp_string( ss_string );
-	}
+	// 	core::scoring::dssp::Dssp dssp( *mypose );	
+	// 	std::string ss_string = dssp.get_dssp_secstruct();
+	// 	return fold_tree_from_dssp_string( ss_string );
+	// }
 
-    core::kinematics::FoldTree
-    fold_tree_from_dssp_string(std::string const & ss_string) {
+    // core::kinematics::FoldTree
+    // fold_tree_from_dssp_string(std::string const & ss_string) {
         
-        utility::vector1< std::pair< core::Size, core::Size > > ss_boundaries = identify_secondary_structure_spans( ss_string );
+    //     utility::vector1< std::pair< core::Size, core::Size > > ss_boundaries = protocols::bootcamp::protocols::bootcamp::identify_secondary_structure_spans( ss_string );
 
-        for (core::Size i = 1; i <= ss_boundaries.size(); ++i) {
-            std::cout << ss_boundaries[i].first << " " << ss_boundaries[i].second << std::endl;
-        }
-        core::Size const total_length = ss_string.length();
-        core::kinematics::FoldTree new_ft;
+    //     for (core::Size i = 1; i <= ss_boundaries.size(); ++i) {
+    //         std::cout << ss_boundaries[i].first << " " << ss_boundaries[i].second << std::endl;
+    //     }
+    //     core::Size const total_length = ss_string.length();
+    //     core::kinematics::FoldTree new_ft;
 
-        utility::vector1< core::Size > midpoints;
-        for ( core::Size ii = 1; ii <= ss_boundaries.size(); ++ii ) {
-            core::Size const start = ss_boundaries[ ii ].first;
-            core::Size const stop  = ss_boundaries[ ii ].second;
-            midpoints.push_back(start + (stop - start) / 2);
-        }
+    //     utility::vector1< core::Size > midpoints;
+    //     for ( core::Size ii = 1; ii <= ss_boundaries.size(); ++ii ) {
+    //         core::Size const start = ss_boundaries[ ii ].first;
+    //         core::Size const stop  = ss_boundaries[ ii ].second;
+    //         midpoints.push_back(start + (stop - start) / 2);
+    //     }
 
 
-        // new_ft.add_edge( 1, midpoints[ 1 ], 0 );
-        // for ( core::Size idx = 1; idx < midpoints.size(); ++idx ) {
-        //     core::Size const jump_id = idx; 
-        //     new_ft.add_edge( midpoints[ idx ], midpoints[ idx + 1 ], jump_id );
-        // }
+    //     // new_ft.add_edge( 1, midpoints[ 1 ], 0 );
+    //     // for ( core::Size idx = 1; idx < midpoints.size(); ++idx ) {
+    //     //     core::Size const jump_id = idx; 
+    //     //     new_ft.add_edge( midpoints[ idx ], midpoints[ idx + 1 ], jump_id );
+    //     // }
         
-        int root = midpoints[1];
-        int jump_id = 1;
-        for ( core::Size ii = 1; ii <= midpoints.size(); ++ii ) {
-            core::Size const start_ss = ss_boundaries[ ii ].first;
-            core::Size const stop_ss  = ss_boundaries[ ii ].second;
-            core::Size const midpoint = midpoints[ ii ];
+    //     int root = midpoints[1];
+    //     int jump_id = 1;
+    //     for ( core::Size ii = 1; ii <= midpoints.size(); ++ii ) {
+    //         core::Size const start_ss = ss_boundaries[ ii ].first;
+    //         core::Size const stop_ss  = ss_boundaries[ ii ].second;
+    //         core::Size const midpoint = midpoints[ ii ];
 
-            if (ii < midpoints.size()) {
-                core::Size const next_start_ss = ss_boundaries[ ii + 1 ].first;
-                int loop_mid = (stop_ss + next_start_ss) / 2; 
-                new_ft.add_edge(root, loop_mid, jump_id);
-                jump_id += 1;
-            }
+    //         if (ii < midpoints.size()) {
+    //             core::Size const next_start_ss = ss_boundaries[ ii + 1 ].first;
+    //             int loop_mid = (stop_ss + next_start_ss) / 2; 
+    //             new_ft.add_edge(root, loop_mid, jump_id);
+    //             jump_id += 1;
+    //         }
 
-            if (ii > 1) {
-                new_ft.add_edge(root, midpoints[ ii ], jump_id);
-                jump_id += 1;
-            }
+    //         if (ii > 1) {
+    //             new_ft.add_edge(root, midpoints[ ii ], jump_id);
+    //             jump_id += 1;
+    //         }
             
-            new_ft.add_edge(midpoints[ ii ], ii > 1 ? start_ss : 1, core::kinematics::Edge::PEPTIDE);
-            new_ft.add_edge(midpoints[ ii ], ii < midpoints.size() ? stop_ss : total_length, core::kinematics::Edge::PEPTIDE);
+    //         new_ft.add_edge(midpoints[ ii ], ii > 1 ? start_ss : 1, core::kinematics::Edge::PEPTIDE);
+    //         new_ft.add_edge(midpoints[ ii ], ii < midpoints.size() ? stop_ss : total_length, core::kinematics::Edge::PEPTIDE);
 
-            if (ii < midpoints.size()) {
-                core::Size const next_start_ss = ss_boundaries[ ii + 1 ].first;
-                int loop_mid = (stop_ss + next_start_ss) / 2; 
-                new_ft.add_edge(loop_mid, stop_ss+1, core::kinematics::Edge::PEPTIDE);
-                new_ft.add_edge(loop_mid, next_start_ss-1, core::kinematics::Edge::PEPTIDE);
-            }
-            // if ( start_ss > last_res && start_ss > 1 ) {
-            //      new_ft.add_edge( last_res, start_ss - 1, core::kinematics::Edge::PEPTIDE );
-            // }
+    //         if (ii < midpoints.size()) {
+    //             core::Size const next_start_ss = ss_boundaries[ ii + 1 ].first;
+    //             int loop_mid = (stop_ss + next_start_ss) / 2; 
+    //             new_ft.add_edge(loop_mid, stop_ss+1, core::kinematics::Edge::PEPTIDE);
+    //             new_ft.add_edge(loop_mid, next_start_ss-1, core::kinematics::Edge::PEPTIDE);
+    //         }
+    //         // if ( start_ss > last_res && start_ss > 1 ) {
+    //         //      new_ft.add_edge( last_res, start_ss - 1, core::kinematics::Edge::PEPTIDE );
+    //         // }
             
-            // if ( start_ss < midpoint ) {
-            //     new_ft.add_edge( start_ss, midpoint, core::kinematics::Edge::PEPTIDE );
-            // }
+    //         // if ( start_ss < midpoint ) {
+    //         //     new_ft.add_edge( start_ss, midpoint, core::kinematics::Edge::PEPTIDE );
+    //         // }
             
-            // if ( midpoint < stop_ss ) {
-            //     new_ft.add_edge( midpoint, stop_ss, core::kinematics::Edge::PEPTIDE );
-            // }
+    //         // if ( midpoint < stop_ss ) {
+    //         //     new_ft.add_edge( midpoint, stop_ss, core::kinematics::Edge::PEPTIDE );
+    //         // }
             
-        }
-        return new_ft;
-    }
+    //     }
+    //     return new_ft;
+    // }
 };

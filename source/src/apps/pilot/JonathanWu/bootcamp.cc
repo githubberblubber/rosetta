@@ -18,8 +18,9 @@
 #include <core/scoring/ScoreFunctionFactory.hh>
 #include <core/scoring/ScoreFunction.hh>
 #include <core/pose/Pose.fwd.hh>
+#include <core/pose/variant_util.hh>
 #include <core/scoring/Energies.hh>
-
+#include <core/scoring/dssp/Dssp.hh>
 
 #include <core/kinematics/MoveMap.hh>           
 #include <core/optimization/MinimizerOptions.hh>
@@ -30,6 +31,8 @@
 #include <numeric/random/random.hh>
 #include <protocols/moves/MonteCarlo.hh>
 #include <protocols/moves/PyMOLMover.hh>
+
+#include <protocols/bootcamp/fold_tree_from_ss.hh>
 
 // core/import/import_pose
 int main( int argc, char ** argv ) {
@@ -42,7 +45,12 @@ int main( int argc, char ** argv ) {
         return 1;
     }
     core::pose::PoseOP mypose = core::import_pose::pose_from_file( filenames[1] );
+    mypose->fold_tree(protocols::bootcamp::fold_tree_from_ss(mypose));
+
+    core::pose::variant_util::correctly_add_cutpoint_variants( mypose );
+
     core::scoring::ScoreFunctionOP sfxn = core::scoring::get_score_function();
+    sfxn->set_weight( core::scoring::linear_chainbreak, 1.0 );
     core::Real score = (sfxn)->score(*mypose);
 
     std::cout << score << " ";
