@@ -17,6 +17,7 @@
 
 // Core headers
 #include <core/pose/Pose.hh>
+#include <core/kinematics/FoldTree.hh>
 
 // Basic/Utility headers
 #include <basic/Tracer.hh>
@@ -30,6 +31,8 @@
 // Citation Manager
 #include <utility/vector1.hh>
 #include <basic/citation_manager/UnpublishedModuleInfo.hh>
+
+#include <protocols/bootcamp/fold_tree_from_ss.hh>
 
 static basic::Tracer TR( "protocols.bootcamp.BootCampMover" );
 
@@ -57,8 +60,9 @@ BootCampMover::~BootCampMover(){}
 
 /// @brief Apply the mover
 void
-BootCampMover::apply( core::pose::Pose& ){
-
+BootCampMover::apply( core::pose::Pose& pose){
+	core::kinematics::FoldTree ft = protocols::bootcamp::fold_tree_from_ss(pose);
+	
 }
 
 ////////////////////////////////////////////////////////////////////////////////
