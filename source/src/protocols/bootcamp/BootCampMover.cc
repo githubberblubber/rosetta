@@ -62,7 +62,10 @@ BootCampMover::~BootCampMover(){}
 void
 BootCampMover::apply( core::pose::Pose& pose){
 	core::kinematics::FoldTree ft = protocols::bootcamp::fold_tree_from_ss(pose);
-	
+	// protocols::jd2::JobDistributor::get_instance()->go(seq_mover);
+	// protocols::moves::SequenceMoverOP seq_mover( new protocols::moves::SequenceMover );
+	// return utility::pointer::make_shared< PackerTask_ >( pose, ( ig_threads_to_request == 0 ? basic::options::option[basic::options::OptionKeys::multithreading::interaction_graph_threads]() : ig_threads_to_request ) );
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -95,7 +98,6 @@ void BootCampMover::provide_xml_schema( utility::tag::XMLSchemaDefinition & xsd 
 
 	protocols::moves::xsd_type_definition_w_attributes( xsd, mover_name(), "BootCampMover class can construct a fold tree from DSSPand introduce cutpoints for loop closure solvers.", attlist );
 }
-
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief required in the context of the parser/scripting scheme

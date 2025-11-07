@@ -178,6 +178,7 @@ TaskFactory::create_packer_task(
 	core::Size const ig_threads_to_request /*=0*/
 )
 {
+
 	return utility::pointer::make_shared< PackerTask_ >( pose, ( ig_threads_to_request == 0 ? basic::options::option[basic::options::OptionKeys::multithreading::interaction_graph_threads]() : ig_threads_to_request ) );
 }
 

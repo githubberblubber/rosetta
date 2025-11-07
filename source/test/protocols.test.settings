@@ -13,6 +13,7 @@ sources = {
 	"bootcamp": [
 		"QueueTests",
 		"FoldTreeFromSSTests",
+		"BootCampMoverTests",
 	],
 	"aa_composition" : [
 		"AddHelixSequenceConstraintsMoverTests",
